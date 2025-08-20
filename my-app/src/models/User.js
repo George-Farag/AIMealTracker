@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 // --- Small subdocs ---
 const GoalSchema = new mongoose.Schema({
   target: { type: String, enum: ["lose_weight", "maintain", "gain"], required: true },
-  calories: { type: Number, min: 1000, max: 4000 }, // optional manual override
+  calories: { type: Number, min: 600, max: 6000 }, // optional manual override
   activityLevel: { type: String, enum: ["sedentary","light","moderate","active"], default: "light" }
 }, { _id: false });
 

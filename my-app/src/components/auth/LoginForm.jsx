@@ -8,8 +8,6 @@ export default function LoginForm() {
   const [showPw, setShowPw] = useState(false)
   const [loading, setLoading] = useState(false)
   const [err, setErr] = useState("")
-
-  // Form submission
   async function onSubmit(e) {
     e.preventDefault()
     setErr("")
@@ -33,7 +31,6 @@ export default function LoginForm() {
   }
 
   return (
-    // Background
     <div className="min-h-screen w-screen flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-800 p-4 fixed inset-0">
       <form
         onSubmit={onSubmit}
@@ -87,7 +84,6 @@ export default function LoginForm() {
           className={`w-full rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 px-3 py-2.5 md:px-4 md:py-3 text-sm md:text-base font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-[1.02] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:scale-100`}
         >
           {loading ? (
-            // loading spinner
             <span className="flex items-center justify-center gap-2">
               <svg className="animate-spin h-4 w-4 md:h-5 md:w-5" viewBox="0 0 24 24">
                 <circle
